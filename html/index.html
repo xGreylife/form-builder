@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Builder</title>
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="icon" href="../img/google-forms.png">
+</head>
+<body>
+    <div class="form-builder-container">
+        <h1>Form Builder</h1>
+        
+        <div class="section-controls">
+            <div class="section-builder">
+                <input type="text" id="section_title" placeholder="Section Title">
+                <button id="add_section_btn">Add Section</button>
+            </div>
+            <div class="section-list">
+                <h2>Sections</h2>
+                <ul id="section_list"></ul>
+            </div>
+        </div>
+
+        <div class="field-builder">
+            <div class="field-builder-fix">
+                <select id="field_type">
+                    <option value="text">Text Input</option>
+                    <option value="email">Email Input</option>
+                    <option value="password">Password</option>
+                    <option value="date">Date</option>
+                    <option value="file">File Input</option>
+                    <option value="select">Select Dropdown</option>
+                    <option value="radio">Radio Buttons</option>
+                    <option value="checkbox">Checkboxes</option>
+                    <option value="textarea">Text Area</option>
+                </select>
+                <input type="text" id="field_label" placeholder="Field Label">
+                <input type="text" id="field_name" placeholder="Field Name">
+                <label for="required_field">Required</label>
+                <input type="checkbox" id="required_field">
+                <input type="file" id="field_image">
+                <button id="add_field_btn">Add Field</button>
+            </div>
+
+            <div id="options_section" style="display: none;">
+                <button id="add_option_btn">Add Option</button>
+                <div id="options_container"></div>
+            </div>
+        </div>
+
+        <div class="configured-fields">
+            <h2>Configured Fields</h2>
+            <ul id="field_list"></ul>
+        </div>
+
+        <div class="form-preview">
+            <div class="form-preview-header"> 
+                <h2>Form Preview</h2>
+                <label class="toggle">
+                    <input type="checkbox" id="theme_btn" name="btnToggle" />
+                    <span class="slider"></span>
+                </label>
+            </div>
+            
+            <div id="form_preview"></div>
+        </div>
+    </div>
+
+    <script src="../js/validationConfig.js"></script>
+    <script src="../js/domElementManager.js"></script>
+    <script src="../js/formConfig.js"></script>
+    <script src="../js/formProgress.js"></script>
+    <script src="../js/formBuilder.js"></script>
+    <script src="../js/script.js"></script>
+</body>
+</html>
